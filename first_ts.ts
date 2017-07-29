@@ -79,6 +79,9 @@ interface readonly_propertise{
 let number: Array<number>=[1,2,3,4,5];
 let check: ReadonlyArray<number>=number;
 
-
+//Excess Propertise in interface
+interface excess_propertise{
+    
+}
 
 
