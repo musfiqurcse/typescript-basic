@@ -81,7 +81,19 @@ let check: ReadonlyArray<number>=number;
 
 //Excess Propertise in interface
 interface excess_propertise{
-    
+    color?: string;
+    width: number;
+    [propName: string]: any;
 }
+function color_propertise(attr: excess_propertise): {color: string}{
+    let newField={color: 'white'};
+    if(attr.color){
+        newField.color=attr.color;
+        console.log(attr);
+    }
+    return newField;
+}
+let propertise_list={color:'Test', item: 'testing',width:101};
+let myField=color_propertise(propertise_list);
 
-
+// Class uses in Typescript

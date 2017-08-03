@@ -48,3 +48,22 @@ function printLabel(labelledobj) {
 }
 var myObj = { size: 10, label: "Size 10 Object" };
 printLabel(myObj);
+function createSquare(config) {
+    var newSquare = { color: "white", area: 10 };
+    if (config.color) {
+        newSquare.color = config.color;
+    }
+    return newSquare;
+}
+var number = [1, 2, 3, 4, 5];
+var check = number;
+function color_propertise(attr) {
+    var newField = { color: 'white' };
+    if (attr.color) {
+        newField.color = attr.color;
+        console.log(attr);
+    }
+    return newField;
+}
+var propertise_list = { color: 'Test', item: 'testing', width: 101 };
+var myField = color_propertise(propertise_list);
