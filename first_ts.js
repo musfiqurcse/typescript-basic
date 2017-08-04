@@ -67,3 +67,25 @@ function color_propertise(attr) {
 }
 var propertise_list = { color: 'Test', item: 'testing', width: 101 };
 var myField = color_propertise(propertise_list);
+var Clock = (function () {
+    function Clock(h, m) {
+    }
+    return Clock;
+}());
+var Clock01 = (function () {
+    function Clock01(h, m) {
+    }
+    Clock01.prototype.setTime = function (d) {
+        this.currentTime = d;
+    };
+    return Clock01;
+}());
+var mysearch;
+mysearch = function (firstString, secondString) {
+    var result = firstString.search(secondString);
+    return result > -1;
+};
+mysearch = function (initial, searchItem) {
+    var result = initial.search(searchItem);
+    return result > -1;
+};
