@@ -48,3 +48,12 @@ function printLabel(labelledobj) {
 }
 var myObj = { size: 10, label: "Size 10 Object" };
 printLabel(myObj);
+function createSquare(config) {
+    var newSquare = { color: "white", area: 10 };
+    if (config.color) {
+        newSquare.color = config.color;
+    }
+    return newSquare;
+}
+var number = [1, 2, 3, 4, 5];
+var check = number;

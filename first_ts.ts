@@ -81,7 +81,10 @@ let check: ReadonlyArray<number>=number;
 
 //Excess Propertise in interface
 interface excess_propertise{
-    
+    variable: string;
+
 }
 
+let mywork: excess_propertise=
 
+//Class testing with Work 
