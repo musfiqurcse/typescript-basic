@@ -81,10 +81,85 @@ let check: ReadonlyArray<number>=number;
 
 //Excess Propertise in interface
 interface excess_propertise{
-    variable: string;
+    color?: string;
+    width: number;
+    [propName: string]: any;
+}
+function color_propertise(attr: excess_propertise): {color: string}{
+    let newField={color: 'white'};
+    if(attr.color){
+        newField.color=attr.color;
+        console.log(attr);
+    }
+    return newField;
+}
+let propertise_list={color:'Test', item: 'testing',width:101};
+let myField=color_propertise(propertise_list);
 
+// Class uses in Typescript
+interface ClockInterface{
+    currentTime: Date;
+}
+class Clock implements ClockInterface{
+    currentTime: Date;
+    constructor(h: number, m: number){}
+}
+interface ClockInterface01{
+    currentTime: Date;
+    setTime(d: Date);
+}
+class Clock01 implements ClockInterface01{
+    currentTime: Date;
+    setTime(d: Date){
+        this.currentTime=d;
+    }
+    constructor(h: number, m: number){}
 }
 
-let mywork: excess_propertise=
+// Interface with Function
+interface searchFunc01{
+    (firstString: string, secondString: string): boolean;
+}
 
-//Class testing with Work 
+let mysearch: searchFunc01;
+mysearch = function(firstString: string, secondString: string){
+    let result=firstString.search(secondString);
+    return result> -1;
+}
+
+mysearch = function(initial: string, searchItem: string){
+    let result=initial.search(searchItem);
+    return result > -1;
+}
+
+interface NumberDictonary{
+    readonly [index: number]: string;
+}
+let myArray: NumberDictonary=["Alice","Bob"];
+
+
+interface NumberDictionary {
+    [index: string]: number;
+    length: number;    // ok, length is a number
+    //name: string;      // error, the type of 'name' is not a subtype of the indexer
+}
+
+class Greeter {
+    greeting: string;
+    protected item: number;
+    private state: string;
+    constructor(message: string){
+        this.state=message;
+    }
+    greet(){
+        return "Hello, "+this.greeting;
+    }
+}
+let greeter=new Greeter('World');
+
+class HotelGreeting extends Greeter{
+    constructor(){
+        super("Rhio");
+        this.item='test'.length;
+    }
+}

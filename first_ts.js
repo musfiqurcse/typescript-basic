@@ -1,3 +1,13 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var firstNumber;
 var someNumber;
 var tOrF;
@@ -57,3 +67,55 @@ function createSquare(config) {
 }
 var number = [1, 2, 3, 4, 5];
 var check = number;
+function color_propertise(attr) {
+    var newField = { color: 'white' };
+    if (attr.color) {
+        newField.color = attr.color;
+        console.log(attr);
+    }
+    return newField;
+}
+var propertise_list = { color: 'Test', item: 'testing', width: 101 };
+var myField = color_propertise(propertise_list);
+var Clock = (function () {
+    function Clock(h, m) {
+    }
+    return Clock;
+}());
+var Clock01 = (function () {
+    function Clock01(h, m) {
+    }
+    Clock01.prototype.setTime = function (d) {
+        this.currentTime = d;
+    };
+    return Clock01;
+}());
+var mysearch;
+mysearch = function (firstString, secondString) {
+    var result = firstString.search(secondString);
+    return result > -1;
+};
+mysearch = function (initial, searchItem) {
+    var result = initial.search(searchItem);
+    return result > -1;
+};
+var myArray = ["Alice", "Bob"];
+var Greeter = (function () {
+    function Greeter(message) {
+        this.state = message;
+    }
+    Greeter.prototype.greet = function () {
+        return "Hello, " + this.greeting;
+    };
+    return Greeter;
+}());
+var greeter = new Greeter('World');
+var HotelGreeting = (function (_super) {
+    __extends(HotelGreeting, _super);
+    function HotelGreeting() {
+        var _this = _super.call(this, "Rhio") || this;
+        _this.item = 'test'.length;
+        return _this;
+    }
+    return HotelGreeting;
+}(Greeter));
