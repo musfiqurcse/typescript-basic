@@ -156,10 +156,21 @@ class Greeter {
     }
 }
 let greeter=new Greeter('World');
-
+// Inhereting Greeter and Update that Greeter
 class HotelGreeting extends Greeter{
     constructor(){
         super("Rhio");
         this.item='test'.length;
+    }
+    testingMethod=()=>{
+        this.greeting='Testing'
+    }
+}
+let instance = new HotelGreeting;
+
+abstract class AnimalKingdom{
+    abstract makesound(): void;
+    move(): void{
+        console.log("roaming the earth")
     }
 }

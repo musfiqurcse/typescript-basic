@@ -110,12 +110,17 @@ var Greeter = (function () {
     return Greeter;
 }());
 var greeter = new Greeter('World');
+// Inhereting Greeter and Update that Greeter
 var HotelGreeting = (function (_super) {
     __extends(HotelGreeting, _super);
     function HotelGreeting() {
         var _this = _super.call(this, "Rhio") || this;
+        _this.testingMethod = function () {
+            _this.greeting = 'Testing';
+        };
         _this.item = 'test'.length;
         return _this;
     }
     return HotelGreeting;
 }(Greeter));
+var instance = new HotelGreeting;
