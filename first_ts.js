@@ -15,7 +15,6 @@ var someElements;
 var someObject;
 var voidThing;
 var anyoldthing;
-// Type Checking
 var arrayInit = [
     1, 2, 23
 ];
@@ -23,13 +22,11 @@ var add = function (num) {
     return 1 + num;
 };
 arrayInit.map(function (item) {
-    // alert(add(item));
     return item;
 });
 var age = 34;
 var myName = 'Shibly Nomany';
 var sentence = 'Hello , my name is ${ myName } . \n I will be ${age+ 1} after 9 years';
-// alert(sentence)
 var Color;
 (function (Color) {
     Color[Color["Red"] = 0] = "Red";
@@ -40,13 +37,8 @@ var c = Color.Green;
 var colorName = Color[2];
 console.log(c);
 console.log(colorName);
-/*
-Data type in Typescript
-*/
-//Tuple
 var x;
 x = ['Testing', 101];
-//void function example
 function testing_void_function() {
     console.log('Void');
 }
@@ -110,7 +102,6 @@ var Greeter = (function () {
     return Greeter;
 }());
 var greeter = new Greeter('World');
-// Inhereting Greeter and Update that Greeter
 var HotelGreeting = (function (_super) {
     __extends(HotelGreeting, _super);
     function HotelGreeting() {
@@ -124,3 +115,56 @@ var HotelGreeting = (function (_super) {
     return HotelGreeting;
 }(Greeter));
 var instance = new HotelGreeting;
+var AnimalKingdom = (function () {
+    function AnimalKingdom() {
+    }
+    AnimalKingdom.prototype.move = function () {
+        console.log("roaming the earth");
+    };
+    return AnimalKingdom;
+}());
+var px;
+var py = { name: "Alice", location: "Seattle" };
+var items = [1, 2, 3, 4, 5, 6];
+items.forEach(function (item, index, array) { return console.log(item); });
+var name_function = function (n) {
+    console.log(n.name);
+};
+name_function({ name: 'Testing Data' });
+var xx = function (a) { return 0; };
+var yy = function (b, s) { return 0; };
+yy = xx;
+var myadd = function (x, y) {
+    return (x + y);
+};
+console.log('Adding: ');
+console.log(myadd(10, 20));
+var testRestParameter = function (firstName, lastName) {
+    var exName = [];
+    for (var _i = 2; _i < arguments.length; _i++) {
+        exName[_i - 2] = arguments[_i];
+    }
+    var name = firstName + '-' + lastName + '-[';
+    exName.forEach(function (item, index, array) { return name += ' ' + item; });
+    name += ']';
+    return name;
+};
+console.log(testRestParameter("Shibly", "Nomany", "MSC", "PSC", "GSC"));
+var suits = ["hearts", "spades", "clubs", "diamonds"];
+function pickCard(x) {
+    if (typeof x == "object") {
+        console.log(typeof x);
+        var pickedCard = Math.floor(Math.random() * x.length);
+        return pickedCard;
+    }
+    else if (typeof x == "number") {
+        var pickedSuit = Math.floor(x / 13);
+        return { suit: suits[pickedSuit], card: x % 13 };
+    }
+}
+var myDeck = [{ suit: "diamonds", card: 2 }, { suit: "spades", card: 10 }, { suit: "hearts", card: 4 }];
+var pickedCard1 = myDeck[pickCard(myDeck)];
+alert("card: " + pickedCard1.card + " of " + pickedCard1.suit);
+var pickedCard2 = pickCard(15);
+alert("card: " + pickedCard2.card + " of " + pickedCard2.suit);
+alert("testing file");
