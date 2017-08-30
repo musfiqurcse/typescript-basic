@@ -1,3 +1,5 @@
+
+import { CoffeeIngredients } from './file/coffee/coffee'
 let firstNumber: string;
 let someNumber: number;
 let tOrF: boolean;
@@ -5,7 +7,15 @@ let someElements: Element;
 let someObject: object;
 let voidThing: void;
 let anyoldthing: any;
-
+let coffee = new CoffeeIngredients()
+// import $ = require("jquery");
+import * as $ from "jquery"
+class RealCoffee extends CoffeeIngredients{
+    constructor(){
+        super()
+        $('body').css('background-color','red');
+    }
+}
 
 // Type Checking
 let arrayInit: Array<number> = [

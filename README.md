@@ -11,6 +11,10 @@ I am learning typescript. This is the very beginning of a typescript.
 `npm install -g jquery`
 `npm install -g http-server` //for http-server
 
+`npm install typescript`
+`npm install jquery`
+`npm install webpack`
+
 
 # My First Typescript is based on Typescript
 * Learning about Basic feature of Interface

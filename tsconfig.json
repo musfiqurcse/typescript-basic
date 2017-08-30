@@ -4,13 +4,15 @@
      "outDir": "./",
      "noImplicitAny": false,
      "removeComments": true,
-     "preserveConstEnums": true
+     "preserveConstEnums": true,
+    "target": "es6"
    },
    "include": [
-     "*"
+     "*",
+     "require.js"
    ],
    "exclude": [
-       "node_modules",
+      "node_modules",
        "**/*.spec.ts"
    ]
  }

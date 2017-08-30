@@ -1,0 +1,33 @@
+{
+  "name": "ts-introduction",
+  "version": "1.0.0",
+  "description": "Get Introduce with Typescript and Package JSON",
+  "main": "webpack.config.js",
+  "dependencies": {
+    "ts-loader": "^2.3.2",
+    "typescript": "^2.4.2",
+    "webpack": "^3.4.1",
+    "jquery":"file:node_modules/@types/jquery"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.2.12"
+  },
+  "scripts": {
+    "test": "webpack --watch",
+    "server": "http-server -c-1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://musfiqurcse@github.com/musfiqurcse/typescript-basic.git"
+  },
+  "keywords": [
+    "Learn",
+    "Typescript"
+  ],
+  "author": "Musfiqur",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/musfiqurcse/typescript-basic/issues"
+  },
+  "homepage": "https://github.com/musfiqurcse/typescript-basic#readme"
+}

@@ -3,7 +3,10 @@
  module.exports = {
    entry: './first_ts.ts',
    resolve: {
-     extensions: ['.webpack.js', '.web.js', '.ts', '.js']
+     extensions: ['.webpack.js', '.web.js', '.ts', '.js'],
+     modules: [
+       "node_modules"
+     ]
    },
    module: {
      loaders: [
